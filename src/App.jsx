@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/AboutComponent';
+import Header from "./components/Header";
 class App extends Component{
   
     render(){
@@ -22,16 +22,13 @@ class App extends Component{
             break;
     }
         return(
-            <div className="bg-dark">
-                <div>
-                    <Header/>
-                    {component}
-                
+            <div>  
+            <Header/>
+            
+                <div className="row">
+                {component} 
                 </div>
-                <div>
-              
-            </div>
-            </div>
+                </div>                                    
           
         )
     }

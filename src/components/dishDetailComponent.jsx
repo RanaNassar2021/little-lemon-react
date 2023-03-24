@@ -6,7 +6,7 @@ class DishDetails extends Component{
     renderComments(){
       const {comments} = this.props.selectedDish;
       return(
-        <div className='col-12 col-md-12'>
+        <div className='col-12 col-md-12 m-1'>
           <Card className='bg-light mt-0 p-2'>
             {comments.map(comment =>(
               <ul className='list-unstyled'>

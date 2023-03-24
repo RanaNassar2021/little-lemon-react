@@ -13,9 +13,11 @@ class Home extends Component{
     render(){
     
         return(
-            <div>
-            <Menu dishes={this.state.dishes}/>      
-            </div>
+            
+              <Menu dishes={this.state.dishes}/>    
+        
+             
+            
           
         )
     }
