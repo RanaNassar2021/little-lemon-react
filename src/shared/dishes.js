@@ -52,7 +52,7 @@ export const DISHES =
         category: 'appetizer',
         label:'',
         price:'1.99',
-        description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce',
+        description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce, very special dish you must try!',
         comments: [
             {
             id: 0,
@@ -98,7 +98,7 @@ export const DISHES =
         category: 'appetizer',
         label:'New',
         price:'1.99',
-        description:'A quintessential ConFusion experience, is it a vada or is it a donut?',
+        description:'A quintessential ConFusion experience, is it a vada or is it a donut? very special dish you need to try!',
         comments: [
             {
             id: 0,

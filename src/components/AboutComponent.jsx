@@ -5,12 +5,12 @@ class About extends Component{
   
     render(){
         return(
-          <div className='container bg-dark fluid'>
+          <div className='container-fluid bg-dark fluid'>
             <div className='row text-light ps-2 ps-sm-5 ms-2 ms-sm-5 '>
               <h2 className=' mt-4'>Restaurant ConFusion </h2>  
            <p className=' mb-5 '>We take inspiration from the world's best cuisines, <br />
             and create a unique fusion experience. Our lipsmacking <br />
-            creations will tickle your senses.</p>               
+            creations will tickle your senses.</p>
             </div>
 
             <div className='row bg-light ps-5 pt-2 '>

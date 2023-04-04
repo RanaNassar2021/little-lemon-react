@@ -7,7 +7,7 @@ class DishDetails extends Component{
       const {comments} = this.props.selectedDish;
       return(
         <div className='col-12 col-md-12 m-1'>
-          <Card className='bg-light mt-0 p-2'>
+          <Card className='bg-dark text-light mt-0 p-2'>
             {comments.map(comment =>(
               <ul className='list-unstyled'>
                 <li key={comment.comment}>
@@ -29,10 +29,12 @@ class DishDetails extends Component{
   render(){
     
     return(
-      <div >
-      <div className='row'>
+      <>
+     
         <div className='col-12 col-md-5 m-1' >
-    <Card >
+          <h4 className='d-inline me-2 '>Dish details</h4>
+          <i class="fas fa-utensils fa-2x"></i>
+    <Card className='bg-dark text-light'>
       <Card.Img width="100%" src={this.props.selectedDish.image} alt={this.props.selectedDish.name}/>
       <Card.Body>
         <Card.Title>{this.props.selectedDish.name}
@@ -42,14 +44,14 @@ class DishDetails extends Component{
     </Card>
     </div>
     <div className='col-12 col-md-5 m-1'>
-   <h4>Comments</h4>
+   <h4 className='d-inline me-2'>Comments</h4>
+   <i class="fas fa-comment-dots fa-2x"></i>
    <div>
     {this.renderComments()}
    </div>
     
     </div>
-    </div>
-    </div>
+    </>
  ) }
 }
 
