@@ -62,7 +62,7 @@ class Menu extends Component {
                   <Card.Body>
                       <Card.Title>{dish.name}</Card.Title>
                       <Card.Text>   {dish.description}   </Card.Text>
-        <Button variant="primary"  onClick={()=> this.onDishSelect(dish)}>select this dish</Button>
+        <Button variant="primary" href='#dish' onClick={()=> this.onDishSelect(dish)}>select this dish</Button>
       </Card.Body>
                   
                 </Card>
@@ -101,7 +101,7 @@ class Menu extends Component {
             
                   {menu}
             </div>
-          <div className="row d-flex align-item-center justify-content-center bg-secondary pt-3">
+          <div className="row d-flex align-item-center justify-content-center bg-secondary pt-3" id='dish'>
           {this.renderDish(this.state.selectedDish)}
           </div>
 
