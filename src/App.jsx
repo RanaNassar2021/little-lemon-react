@@ -16,13 +16,13 @@ class App extends Component{
     render(){
       let component 
       switch (window.location.pathname) {
-          case "https://RanaNassar2021.github.io/little-lemon-react":
+          case "/":
               component = <Home/>
               break;
-              case "https://RanaNassar2021.github.io/little-lemon-react/About":
+              case "/About":
                   component = <About/>
                break;
-               case "https://RanaNassar2021.github.io/little-lemon-react/Reservation":
+               case "/Reservation":
                    component = <Reservation/>
                break;
       
@@ -37,10 +37,10 @@ class App extends Component{
   <Navbar bg="secondary" variant="dark">
         <Container>
         <img src={logo} alt="logo" className="me-4"  />
-          <Navbar.Brand href="https://RanaNassar2021.github.io/little-lemon-react" className='text-dark fw-bold'>Home</Navbar.Brand>
+          <Navbar.Brand href="/" className='text-dark fw-bold'>Home</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="https://RanaNassar2021.github.io/little-lemon-react/About" className='text-dark fw-bold'>About</Nav.Link>
-            <Nav.Link href="https://RanaNassar2021.github.io/little-lemon-react/Reservation" className='text-dark fw-bold'>Reservation</Nav.Link>
+            <Nav.Link href="/About" className='text-dark fw-bold'>About</Nav.Link>
+            <Nav.Link href="/Reservation" className='text-dark fw-bold'>Reservation</Nav.Link>
            
 
           </Nav>
