@@ -33,12 +33,14 @@ class App extends Component{
   
         return(
             <>
-           <ChakraProvider>
-  <Navbar bg="secondary" variant="dark">
-        <Container>
+             <ChakraProvider>
+            
+           <div className='row'>
+            <Navbar bg="secondary" variant="dark"  >
+        <Container >
         <img src={logo} alt="logo" className="me-4"  />
           <Navbar.Brand href="/" className='text-dark fw-bold'>Home</Navbar.Brand>
-          <Nav className="me-auto">
+          <Nav className="me-auto" >
             <Nav.Link href="/About" className='text-dark fw-bold'>About</Nav.Link>
             <Nav.Link href="/Reservation" className='text-dark fw-bold'>Reservation</Nav.Link>
            
@@ -46,10 +48,13 @@ class App extends Component{
           </Nav>
         </Container>
       </Navbar>
+      
+      </div>
+  
                <div className='row'>
                  {component}
                </div>
-              
+               
                </ChakraProvider>
             </>
         )
