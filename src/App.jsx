@@ -10,27 +10,12 @@ import logo from "./shared/Logo-svg.png";
 import Home from "./components/Home";
 import About from "./components/AboutComponent";
 import Reservation from "./components/Reservation";
+import {Route, Routes, Link} from 'react-router-dom';
 
 class App extends Component{
   
     render(){
-      let component 
-      switch (window.location.pathname) {
-          case "/little-lemon-react":
-              component = <Home/>
-              break;
-              case "/little-lemon-react/About":
-                  component = <About/>
-               break;
-               case "/little-lemon-react/Reservation":
-                   component = <Reservation/>
-               break;
-      
-          default:
-              component = <Home/>
-              break;
-      }
-  
+     
         return(
             <>
              <ChakraProvider>
@@ -39,12 +24,16 @@ class App extends Component{
             <Navbar bg="secondary" variant="dark"  >
         <Container >
         <img src={logo} alt="logo" className="me-4"  />
-          <Navbar.Brand href="/little-lemon-react" className='text-dark fw-bold'>Home</Navbar.Brand>
+          <Navbar.Brand className='text-dark fw-bold'>
+            <Link to ="/">Home</Link>
+          </Navbar.Brand>
           <Nav className="me-auto" >
-            <Nav.Link href="/little-lemon-react/About" className='text-dark fw-bold'>About</Nav.Link>
-            <Nav.Link href="/little-lemon-react/Reservation" className='text-dark fw-bold'>Reservation</Nav.Link>
-           
-
+            <Nav.Link className='text-dark fw-bold'>
+              <Link to='/about'>About</Link>
+            </Nav.Link>
+            <Nav.Link className='text-dark fw-bold'>
+              <Link to='/reservation'>Reservation</Link>
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -52,7 +41,11 @@ class App extends Component{
       </div>
   
                <div className='row'>
-                 {component}
+                <Routes>
+                  <Route exact path='/' element={<Home/>} />
+                  <Route exact path='/about' element={<About/>} />
+                  <Route exact path='/reservation' element={<Reservation/>} />
+                </Routes>
                </div>
                
                </ChakraProvider>

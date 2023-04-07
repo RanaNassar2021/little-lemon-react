@@ -62,7 +62,7 @@ class Menu extends Component {
                   <Card.Body>
                       <Card.Title>{dish.name}</Card.Title>
                       <Card.Text>   {dish.description}   </Card.Text>
-        <Button variant="primary" href='#dish' onClick={()=> this.onDishSelect(dish)}>select this dish</Button>
+        <Button variant="primary"  onClick={()=> this.onDishSelect(dish)}>select this dish</Button>
       </Card.Body>
                   
                 </Card>
