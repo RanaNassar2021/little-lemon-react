@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Card, Button} from 'react-bootstrap';
 import DishDetails from './dishDetailComponent';
-import food from '../shared/food.jpg'
+import food from '../shared/food.jpg';
 
 var rowHeight ={
   height: 300
@@ -36,8 +36,11 @@ class Menu extends Component {
     }  
     
     onDishSelect(dish){
-      this.setState({selectedDish: dish})
+      this.setState({selectedDish: dish});
+     
     }
+
+   
 
     renderDish(dish){
       if(dish!=null){
@@ -54,6 +57,13 @@ class Menu extends Component {
 
 
     render() {
+
+      const handleClickScroll = () => {
+        const element = document.getElementById('dish');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
         const menu = this.props.dishes.map((dish) => {
             return (
               <div key={dish.id}  className="col-12 col-md-5 m-1" >
@@ -62,7 +72,7 @@ class Menu extends Component {
                   <Card.Body>
                       <Card.Title>{dish.name}</Card.Title>
                       <Card.Text>   {dish.description}   </Card.Text>
-        <Button variant="primary"  onClick={()=> this.onDishSelect(dish)}>select this dish</Button>
+        <Button variant="primary"  onClick={()=> {this.onDishSelect(dish) ; handleClickScroll()}}> select this dish </Button>
       </Card.Body>
                   
                 </Card>
