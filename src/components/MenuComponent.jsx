@@ -4,7 +4,7 @@ import DishDetails from './dishDetailComponent';
 import food from '../shared/food.jpg';
 
 var rowHeight ={
-  height: 300
+  height: 300,
 }
 
 var foodPic = {
@@ -14,6 +14,7 @@ var foodPic = {
   height:400,
   
 }
+
 
 var description = {
   maxWidth: 250,
@@ -83,28 +84,23 @@ class Menu extends Component {
         return (
          <>
           <div className="container-fluid bg-dark">
-          <div className="row d-flex  pt-2 text-info ps-md-5 ps-0 bg-secondary" style={rowHeight}>
-            <div className='col-12 col-md-5 m-2  me-md-5 ' >
-              <div className='d-flex justify-content-start ms-5 ps-5 '>
+          <div className="row d-flex  pt-2 text-info ps-md-5 ps-0 bg-secondary " style={rowHeight}>
+            <div className='col-12 col-md-5 m-2  me-md-5 d-md-block d-flex flex-column justify-content-center ' >
+              <div className='d-flex  justify-content-md-start ms-5 ps-5  '>
               <h1 className='mb-0' style={title}>Little Lemon</h1>
               </div>
               <div className='d-flex justify-content-center ms-5 ps-5  ' style={description}>
-              <p className='fs-5.5 text-dark'>we are a family owned mediteranean restaurant foucused on traditional recipes served with a modern twist...</p>
+              <p className='fs-5.5 text-dark '>we are a family owned mediteranean restaurant foucused on traditional recipes served with a modern twist...</p>
               </div>
-             
-             
-             
-   
             </div>
-            <div className='col-12 col-md-5 bg-dark  m-2 ms-md-5 ms-5  rounded-4' style={foodPic} >
-  
-            </div>
-       
+            <div className='col-12 col-md-6 d-none d-md-inline  m-2  ms-5  rounded-4' style={foodPic}>
             </div>
 
-            <div className='row ps-5 ms-5 mt-5 text-light pt-5 pb-3'>
-              <div className='col-12 '>
-           <h2 className='d-inline me-3 '>This week's Specials!</h2>
+            </div>
+
+            <div className='row ps-md-5 ms-md-5 mt-md-5 text-light pt-md-5 pb-md-3 '>
+              <div className='col-12'>
+           <h2 className=' d-flex justify-content-center d-md-block m-3'>This week's Specials!</h2>
            </div>
             </div>
             <div className="row d-flex align-item-center justify-content-center ">
